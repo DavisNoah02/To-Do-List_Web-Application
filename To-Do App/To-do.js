@@ -2,6 +2,7 @@
 let inputBox = document.querySelector('#task-input');
 let inputlist = document.querySelector('#list');
 
+
 // enter key event listener---
 inputBox.addEventListener("keydown", function (event) {
     if(event.key === "Enter"){
@@ -75,3 +76,22 @@ function showTask(){
     inputlist.innerHTML = localStorage.getItem("data")
 }
 showTask();  //displays task when page loads
+
+window.onload = function() {
+    const scrollBtn = document.getElementById("scrollTop");
+
+    // Show the button when the user scrolls down 40px from the top of the document
+    window.onscroll = function() {
+        if (document.body.scrollTop >30 || document.documentElement.scrollTop > 30) {
+            scrollBtn.style.display ="block";
+        } else {
+            scrollBtn.style.display = "none";
+        }
+    };
+
+    // Scroll to the top of the document when the button is clicked
+    scrollBtn.onclick = function() {
+        document.body.scrollTop = 0;
+        document.documentElement.scrollTop = 0;
+    };
+};

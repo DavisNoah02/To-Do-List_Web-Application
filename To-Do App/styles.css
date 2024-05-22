@@ -9,6 +9,24 @@ body {
     flex-direction: column;
     min-height: 100vh;
 }
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: large;
+    text-transform: uppercase;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    padding: 10px 20px;
+    background: linear-gradient(135deg,#2a3868, #bda911);
+    color: rgb(64, 5, 5);
+    position: relative;
+    width: 100%;
+    top:10;
+    left: 10;
+}
+.welcome-msg{
+    font-size: larger;
+}
 .container{
     width: 100;
     min-height: calc(100vh - 38px);
@@ -55,7 +73,7 @@ input{
     font-size: medium;
 
 }
-button{
+.btn{
     border:none;
     outline: none;
     padding: 16px 30px;
@@ -65,9 +83,13 @@ button{
     border-radius: 30px;
     background: linear-gradient(to right, #ff6a00, #5e2440);
 }
-button:hover {
-    background-color: #1eba5a; 
+.btn:hover, .btn:focus, .btn:active {
+    /* box-shadow: 0 0 20px rgba(255, 99, 99, 0.5); */
+    -webkit-transform: scale(1.1);
+    transform: scale(1.1);
+    transition: 1s;
 }
+
 ul li{
     list-style: none;
     font-size: 17px;
@@ -135,6 +157,7 @@ ul li .edit {
     color: #bc1818;
     line-height: 40px;
     text-align: center;
+    
 }
 
 ul li .edit:hover {
@@ -142,6 +165,7 @@ ul li .edit:hover {
     border-radius: 50%;
 }
 footer {
+    padding-top:20px;
     text-align: center;
     margin-top: auto;
     padding: 10px 0;
@@ -156,5 +180,51 @@ footer a {
 footer a:hover {
     text-decoration: underline;
 }
+.socialicons{
+    display: flex;
+    justify-content: center;
+}
+.socialicons a{
+    text-decoration: none;
+    padding:5px;
+    background-color: rgb(177, 174, 174);
+    margin: 5px;
+    border-radius: 50%;
+}
+.socialicons a i{
+    font-size: 1.5em;
+    color: black;
+    opacity: 0,6;
+}
+/* Hover affect on social media icon */
+.socialicons a:hover{
+    background-color: #1c8068;
+    transition: 0.5s;
+}
+.socialicons a:hover i{
+    color: rgb(78, 69, 69);
+    transition: 0.5s;
+}
+#scrollTop {
+    display: none;
+    position: fixed;
+    bottom: 20px;
+    right: 10px;
+    width: 40px;
+    height: 46px;
+    z-index: 99;
+    font-size: 26px;
+    border: none;
+    outline: none;
+    background-color: rgb(101, 79, 79);
+    color: rgb(255, 255, 255);
+    cursor: pointer;
+    border-radius: 30%;
+    transition: 1s;
+}
+#scrollTop:hover {
+    background-color: rgb(32, 99, 14);
+}
+
 
 
